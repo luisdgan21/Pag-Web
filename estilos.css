@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+}
+
+.imagen-esquina {
+    position: fixed; 
+    top: 0;
+    left: 50px;
+}
+.imagen-esquina img {
+    width: 100px; 
+    height: auto;
+}
+
+header {
+    background: url(https://e0.pxfuel.com/wallpapers/227/605/desktop-wallpaper-pub-bar-scene.jpg) center/cover no-repeat;
+    height: 300px;
+}
+header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    background-color: #000; 
+    color: #fff;
+    padding: 30px 0;
+}
+
+.contenedor {
+    max-width: 1350px;
+    padding: 20px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.contenedor-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.item {
+    max-width: 210px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-item {
+    width: 100%;
+}
+
+.item:hover {
+    box-shadow: 0 0 12px #177bee;
+    transform: scale(1.1);
+}
+
+.titulo-item {
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.375rem;
+    color: #fff;
+}
+
+.boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: #071952;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito {
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky;
+    top: 0;
+    transition: opacity 0.3s, margin-right 0.3s;
+    margin-right: -100%;
+    opacity: 0;
+    color: #fff;
+}
+
+.header-carrito {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.carrito-item img {
+    margin-right: 20px;
+}
+
+.carrito-item .carrito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito-item-cantidad {
+    border: none;
+    font-size: 1.125rem;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.selector-cantidad i {
+    font-size: 1.125rem;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+}
+
+.btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #fff;
+    font-size: 1.5625rem;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    background-color: #071952;
+    z-index: 20;
+}
+
+.btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: #071952;
+    padding: 30px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #033dfa;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.carrito-total .btn-pagar:hover {
+    transform: scale(1.09);
+}
+
+#searchBar {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #071952;
+    color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+    .contenedor {
+        display: block;
+    }
+    .contenedor-items {
+        width: 100% !important;
+    }
+    .carrito {
+        width: 100%;
+    }
+}
